@@ -1,0 +1,100 @@
+body{
+    font-family: 'Balsamiq Sans', 'Helvetica', 'Arial', sans-serif;
+    background: #222;
+    height:100vh;
+}
+
+.bg-inicio{
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.row{
+    max-width: 1024px;
+    margin: auto;
+}
+
+button{
+    font-family: 'Balsamiq Sans', 'Helvetica', 'Arial', sans-serif;
+    background: #e3e764;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+a button{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #333;
+    text-decoration: none;
+}
+
+
+button:hover, button:active{
+    background: rgba(227, 231, 100, .75);
+}
+
+.img-fluid{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h1{
+    text-align:center;
+    color: #e3e764;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+section{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    perspective: 1000px;
+}
+
+.carta-frente, .carta-verso{
+    backface-visibility: hidden;
+}
+
+.carta-frente{
+    transform: rotateY(180deg)translate(0, -12%);
+    margin-top: -100%;
+}
+
+.carta-container{
+    transform-style: preserve-3d;
+}
+
+.carta-container.virada{
+    transform: rotateY(180deg);
+    transition: 1s ease-in-out;
+}
+
+.carta-container.disabled{
+    opacity: .5;
+}
+
+.parabens-cx{
+    position: absolute;
+    background: rgba(10,10,10,.7);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #e3e764;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
